@@ -40,10 +40,19 @@ INSTALLED_APPS = [
     'django_mysql',
     'crispy_forms',
     'accounts.apps.AccountsConfig',
+    'users.apps.UsersConfig',
 ]
+
+AUTH_USER_MODEL = 'users.CustomUser'
 LOGIN_REDIRECT_URL =  'home'
 LOGOUT_REDIRECT_URL = 'home'
 CRISPY_TEMPLATE_PACK =  'bootstrap4'
+# SESSION_ENGINE = 'django_php_bridge.backends.db'
+# SESSION_COOKIE_NAME = 'PHPSESSID'
+# LOGIN_URL = 'C:/xampp/htdocs/test/Login-Form/user_auth.php'
+
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -85,7 +94,7 @@ DATABASES = {
         'ENGINE' : 'django.db.backends.mysql',
         'USER' : 'root',
         'PASSWORD':'',
-        'NAME' : 'arjun',
+        'NAME' : 'trial',
         'HOST':'localhost',
         'PORT' : '3306',
         'OPTIONS': {
@@ -126,7 +135,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
